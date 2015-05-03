@@ -1,0 +1,79 @@
+/*-------------------------------------------------
+SMACSS: BASE
+-------------------------------------------------*/
+
+html,
+body,
+#map {
+  height: 89%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: $font-OpenSans;
+  background: #f3f3f3;
+}
+
+#map {
+  margin-top: 150px;
+  min-height: 505px;
+}
+
+.search-container {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+#search-input {
+  width: 400px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 18px;
+  padding-left: 10px;
+  font-family: $font-OpenSans;
+}
+
+#search {
+  width: 80px;
+  height: 35px;
+  font-size: 18px;
+  background: #f8f8f8;
+  border: 1px solid #c6c6c6;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  position: relative;
+  top: -1px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.current-location {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 8px;
+  margin-left: -50px;
+  cursor: pointer;
+}
+
+.current-location-txt {
+  margin-left: 10px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+//Marker popup content
+#content {
+  width: 206px;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: $font-OpenSans;
+  font-weight: 500;
+}

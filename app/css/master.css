@@ -1,0 +1,153 @@
+/* -----------------------------------------------------------------------
+Version: 0.1
+
+SMACSS [Scalable Modular Architecture for CSS]
+Reference: http://smacss.com/
+
+Categorizing:
+1. Base  - Defaults elements, attribute selectors, pseudo-class selectors styling [example: body, form, a]
+2. Layout  - Divide the page into sections [example: header, footer] [prefix: l-]
+3. Modules - Reusable, Modular parts of design [example: sidebar, popup] [prefix: module-]
+4. State - How our module or layouts look in particular state [example: expanded, active] [prefix: is-]
+5. Theme - Look and feel of subcomponent based on theme [example: dark, light] [prefix: theme-]
+6. Pages   - Page specific styles. [prefix: page-]
+----------------------------------------------------------------------- */
+/*-------------------------------------------------
+MASTER: IMPORTING STYLESHEETS
+-------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*-------------------------------------------------
+SMACSS: VARIABLES
+-------------------------------------------------*/
+/* Colors */
+/* Font */
+/*
+TODO ::
+[] Integrate Bourbon to make use of most mixins - http://bourbon.io/docs/
+*/
+/*-------------------------------------------------
+ MIXIN :: CLEARFIX
+-------------------------------------------------*/
+/*-------------------------------------------------
+ MIXIN :: PIXEL TO EM CONVERTOR
+-------------------------------------------------*/
+/*-------------------------------------------------
+ MIXIN :: BORDER RADIUS
+-------------------------------------------------*/
+/*-------------------------------------------------
+ MIXIN :: TRANSITION
+-------------------------------------------------*/
+/*-------------------------------------------------
+ MIXIN :: BOX SHADOW
+-------------------------------------------------*/
+/*-------------------------------------------------
+ MIXIN :: SCALE - TRANSFORM
+-------------------------------------------------*/
+/*-------------------------------------------------
+ MIXIN :: ROTATE - TRANSFORM
+-------------------------------------------------*/
+/*-------------------------------------------------
+ MIXIN :: FONT STYLE
+-------------------------------------------------*/
+/*-------------------------------------------------
+SMACSS: BASE
+-------------------------------------------------*/
+html, body, #map {
+  height: 89%;
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  background: #f3f3f3; }
+
+#map {
+  margin-top: 150px;
+  min-height: 505px; }
+
+.search-container {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  text-align: center; }
+
+#search-input {
+  width: 400px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 18px;
+  padding-left: 10px;
+  font-family: 'Open Sans', 'Arial', sans-serif; }
+
+#search {
+  width: 80px;
+  height: 35px;
+  font-size: 18px;
+  background: #f8f8f8;
+  border: 1px solid #c6c6c6;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  position: relative;
+  top: -1px;
+  left: 10px;
+  cursor: pointer; }
+
+.current-location {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 8px;
+  margin-left: -50px;
+  cursor: pointer; }
+
+.current-location-txt {
+  margin-left: 10px;
+  margin-right: 30px;
+  cursor: pointer; }
+
+#content {
+  width: 206px;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-weight: 500; }
+
+/*-------------------------------------------------
+SMACSS: PAGE - LANDING
+-------------------------------------------------*/
