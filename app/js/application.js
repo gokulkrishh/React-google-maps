@@ -85,12 +85,12 @@ var Searchbar = React.createClass({
   render: function() {
     return (
       <div className="search-container">
-
+        <h1>Google maps using React.js</h1>
         <img src="../images/current-location.png" className="current-location" onClick={this.getCurrentLocation} />
 
         <span className="current-location-txt" onClick={this.getCurrentLocation}>Current Location</span>
 
-        <input type="text" id="search-input" placeholder="Madiwala, Bangalore" />
+        <input type="text" id="search-input" placeholder="Type your address..." />
         
         <button id="search" onClick={this.getAddress}>Search</button>
       </div> 
@@ -136,6 +136,41 @@ var App = React.createClass({
       map: map,
       title: 'location'
     });
+
+    var searchBar = document.getElementById('search-input');
+
+    //Adding autocomplete to search bar
+    var autocomplete = new google.maps.places.Autocomplete(searchBar);
+    autocomplete.bindTo('bounds', map); //Binding autocomplete
+
+    //On click of autocomplete search, add marker to palce
+    google.maps.event.addListener(autocomplete, 'place_changed', function(event) {
+      
+      marker.setVisible(false);//set marker to not visible
+      
+      //Selected place
+      var place = autocomplete.getPlace();
+
+      if (marker) {
+        marker.setMap(null);
+      }
+
+      //Adding marker to the selected location
+      var position = new google.maps.LatLng(place.geometry.location.A, place.geometry.location.F);
+
+      //Marker
+      marker = new google.maps.Marker({
+        map: map,
+        zoom: 25,
+        position: position
+      });
+
+      map.setZoom(17);
+      map.setCenter(marker.getPosition());
+      
+      marker.setVisible(true); //Set marker to visible
+    });
+
   },
   
   //Render google maps and search bar in page

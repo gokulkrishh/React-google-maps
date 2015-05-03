@@ -15,6 +15,13 @@ body {
   background: #f3f3f3;
 }
 
+h1 {
+  font-size: 25px;
+  text-transform: capitalize;
+  position: relative;
+  top: -25px;
+}
+
 #map {
   margin-top: 150px;
   min-height: 505px;
