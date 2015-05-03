@@ -1,7 +1,7 @@
 # React google maps
 Google maps application using React.js
 
-![React-google-maps](https://raw.githubusercontent.com/gokulkrishh/React-google-maps/master/app/images/screenshot.png "React google maps")
+![React-google-maps](https://github.com/gokulkrishh/React-google-maps/raw/master/app/images/application-screenshot.png "React google maps")
 
 
 ## Instruction to run the application
